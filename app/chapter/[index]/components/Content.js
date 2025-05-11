@@ -11,6 +11,7 @@ export default function Content({myData}){
     const router = useRouter()
     const chapterIndex = usePathname().split("/")[2]
     const [currentContentIndex, setContentIndex] = useState(0);
+    const [currentTrack, setTrack] = useState(0);
     
     const chapterData = myData.find(item => String(chapterIndex) === item._id)
         if (!chapterData){
@@ -44,6 +45,7 @@ export default function Content({myData}){
         if (currentContentIndex < contentSize - 1){
             setContentIndex(currentContentIndex + 1)
         } else {
+            setTrack(0);
             const nextId = chapterIds[chapterPos + 1]
             router.push(`/chapter/${nextId}`)
             setContentIndex(0)
@@ -54,6 +56,7 @@ export default function Content({myData}){
         if (currentContentIndex > 0){
             setContentIndex(currentContentIndex - 1)
         } else if (chapterPos > 0) {
+            setTrack(0);
             const prevId = chapterIds[chapterPos - 1]
             const prevChapter = myData[chapterPos - 1]
             router.push(`/chapter/${prevId}`)
@@ -76,6 +79,8 @@ export default function Content({myData}){
                     musicData={chapterData.contents[currentContentIndex].music} 
                     nextPageHandler={handleNext}
                     prevPageHandler={handlePre}
+                    setTrack={setTrack}
+                    currentTrack={currentTrack}
                 />
             </div>
             

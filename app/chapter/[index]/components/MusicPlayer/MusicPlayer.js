@@ -8,12 +8,12 @@
 import style from './MusicPlayer.module.css';
 import { useRef, useState } from "react";
 
-export default function MusicPlayer({musicData, nextPageHandler, prevPageHandler}){
+export default function MusicPlayer({musicData, nextPageHandler, prevPageHandler, currentTrack, setTrack}){
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
-    const [currentTrack, setTrack] = useState(0);
+    // const [currentTrack, setTrack] = useState(0);
 
 
     
