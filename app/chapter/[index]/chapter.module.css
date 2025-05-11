@@ -1,0 +1,154 @@
+@font-face {
+    font-family: Eulyoo1945_Regular;
+    font-style: normal;
+    src: url('/fonts/Eulyoo1945-Regular.woff');
+}
+
+@font-face {
+    font-family: Eulyoo1945_SemiBold;
+    font-style: normal;
+    font-weight: 600;
+    src: url('/fonts/Eulyoo1945-SemiBold.woff');
+}
+
+@font-face {
+    font-family: Pretendard-Regular;
+    font-style: normal;
+    src: url('/fonts/Pretendard-Regular.woff');
+}
+
+@font-face {
+    font-family: Libre-Baskerville;
+    font-style: normal;
+    font-weight: 600;
+    src: url('/fonts/Libre-Baskerville.woff');
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    height: 100vh;
+    overflow: hidden;   /* 전체 스크롤 제거 */
+}
+
+.left_container{
+    display: grid;
+    grid-row: 1fr 6fr 2fr;
+    height: 100vh;
+    background: black;
+    color: #FFF8E9;
+}
+
+.right_container{
+    display: grid;
+    height: 100vh;
+    background: #FFF8E9;
+    color: black;
+}
+
+.title{
+    /* 1) 요소 크기를 내용에 딱 맞게 */
+    display: inline-block;
+    
+    /* 2) 그리드 cell 내에서 왼쪽 위로만 배치(늘어남 방지) */ 
+    justify-self: start;
+    align-self: start; 
+    
+    padding: 6%;
+    font-size: x-large;
+    line-height: 1.5;
+    color: white;
+}
+
+.title_ko{
+    font-family: 'Eulyoo1945_SemiBold';
+}
+  
+.title_en{
+    font-family: 'Libre-Baskerville';
+    font-style: italic;
+}
+
+.img{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+.chapter{
+    display: inline-block;
+    margin: 5px;
+    font-weight: bold;
+    font-family: 'Pretendard-Regular';
+}
+
+.content{
+    margin: 10%;
+    padding-bottom: 25%;
+    line-height: 1.8em;
+    font-weight: normal;
+    font-family: 'Eulyoo1945_Regular';
+    font-size: small;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    position: relative;
+
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0,0,0,1) 60%,
+      rgba(0,0,0,0) 100%
+    );
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+}
+
+
+.page{
+    position: absolute;
+    margin: 0px;
+    bottom: 0px;
+    width: 100%;
+    font-family: 'Eulyoo1945_Regular';
+    font-size: small;
+}
+
+.button{
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+}
+
+.upbtn{
+    cursor: pointer;
+}
+
+.upbtn:hover {
+    content: url('https://norwegianwood-music.s3.ap-northeast-2.amazonaws.com/img/Direction%3DUp%2C+Mouse+Hover%3DYes.png');
+}
+
+.downbtn{
+    cursor: pointer;
+}
+
+.downbtn:hover {
+    content: url('https://norwegianwood-music.s3.ap-northeast-2.amazonaws.com/img/Direction%3DDown%2C+Mouse+Hover%3DYes.png');
+}
+
+
+.Libre_font{
+    margin: 0px;
+    font-family: 'Libre-Baskerville';
+    font-style: italic;
+}
+
+.Libre_super{
+    margin: 0px;
+    font-family: 'Libre-Baskerville';
+    vertical-align: super;
+    font-size: x-small;
+    font-style: italic;
+}

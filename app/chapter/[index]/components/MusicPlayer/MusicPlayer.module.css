@@ -1,0 +1,127 @@
+@font-face {
+    font-family: Pretendard-Regular;
+    font-style: normal;
+    src: url('/fonts/Pretendard-Regular.woff');
+}
+
+
+@font-face{
+    font-family: Pretendard-Medium;
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/Pretendard-Medium.woff');
+}
+
+
+.progressbarwrapper{
+    display: flex;
+    justify-content: center;
+}
+
+
+.progressbar {
+    appearance: none;
+    width: 60%;
+    height: 5px;
+    border-radius: 5px;
+    background: #A39F95;
+  
+    /* gradient를 이용해 앞 부분만 회색 fill 로 */
+    background-image: linear-gradient(
+      #E0E0E0,
+      #E0E0E0
+    );
+    background-repeat: no-repeat;
+
+    /* --percent 는 인라인 스타일로 업데이트됩니다 */
+    background-size: var(--percent, 0%) 100%;
+}
+
+
+
+.progressbar:global(::-webkit-slider-thumb) {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -2px;
+}
+
+.progressbar:global(::-webkit-slider-runnable-track) {
+    height: 10px;
+    background: transparent;
+    border-radius: 5px;
+}
+
+  
+.controller{
+    /* 1) 화면 중앙에 오도록 폭과 마진 조정 */
+    width: 60%;
+    margin: 5% auto 0;     /* 상단 5%, 좌우 자동 중앙, 하단 0 */
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;   /* 수평 & 수직 중앙 */
+    column-gap: 1rem;
+}
+
+.handlePre{
+    justify-self: end;
+    align-self: center;
+    rotate: 180deg;
+    width: 18%;
+}
+
+.handleNext{
+    justify-self: start;
+    align-self: center;
+    width: 18%;
+}
+
+.PausePlay{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Play{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.Pause{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+
+.time_text{
+    margin-left: 13%;
+    margin-right: 13%;
+    margin-top: 2%;
+    font-family: 'Pretendard-Regular';
+    font-size: 14px;
+    color: white;
+}
+
+.music_title{
+    margin: 1%;
+    font-family: 'Pretendard-Medium';
+    font-size: large;
+    text-align: center;
+}
+
+.music_artist{
+    margin: 1%;
+    font-family: 'Pretendard-Regular';
+    font-size: small;
+    color: #B2AEA3;
+    text-align: center;
+    margin-bottom: 30px;
+}

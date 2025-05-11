@@ -1,0 +1,103 @@
+@font-face {
+    font-family: Eulyoo1945_Regular;
+    font-style: normal;
+    src: url('/fonts/Eulyoo1945-Regular.woff');
+}
+
+@font-face {
+    font-family: Eulyoo1945_SemiBold;
+    font-style: normal;
+    font-weight: 600;
+    src: url('/fonts/Eulyoo1945-SemiBold.woff');
+}
+
+@font-face {
+    font-family: Libre-Baskerville;
+    font-style: normal;
+    font-weight: 600;
+    src: url('/fonts/Libre-Baskerville.woff');
+}
+
+@font-face {
+    font-family: Pretendard-Regular;
+    font-style: normal;
+    src: url('/fonts/Pretendard-Regular.woff');
+}
+
+
+.closeModal{
+    display: none;
+}
+
+
+.openModal {
+    display: flex;
+    justify-content: center; /* 수평 중앙 */
+    align-items: center;     /* 수직 중앙 */
+  
+    position: fixed;
+    inset: 0;
+    background: black;
+    color: white;
+    z-index: 9999;
+  }
+
+
+.modal_chapter{
+    column-count: 2;
+    column-gap: 2rem;
+    line-height: 400%;
+    width: 80vw;
+}
+
+
+.hoverUnderline:hover {
+    text-decoration: underline;
+}
+
+
+.close_button{
+    position: fixed;
+    width: 30px;
+    height: 28px;
+    top: 0px;
+    right: 0px;
+    margin: 30px;
+}
+
+.hamburger{
+    float: right;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    right: 0px;
+    margin: 30px;
+}
+
+.chapter_index{
+    font-family: 'Libre Baskerville';
+    font-size: large;
+    font-style: italic;
+}
+
+.chapter_text{
+    font-family: 'Eulyoo1945_Regular';
+    font-size: x-large;
+}
+
+.music_length{
+    margin: 0px;
+    font-family: 'Pretendard-Regular';
+    vertical-align: super;
+    font-size: small;
+}
+
+.Libre{
+    margin: 0px;
+    font-family: 'Libre Baskerville';
+    vertical-align: super;
+    font-size: small;
+    font-style: italic;
+    letter-spacing: 0.1em; 
+}
