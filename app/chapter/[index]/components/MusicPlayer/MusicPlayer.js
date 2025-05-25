@@ -1,8 +1,3 @@
-// 이전으로 가면 이전 chapter의 첫번째로 가는 오류 (원래는 이전 챕터의 가장 마지막 페이지로 이동해야함)
-// MusicPlayer.js에 있는 currentTrack, setTrack을 content.js로 빼야 함
-
-
-
 'use client'
 
 import style from './MusicPlayer.module.css';
@@ -13,7 +8,6 @@ export default function MusicPlayer({musicData, nextPageHandler, prevPageHandler
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
-    // const [currentTrack, setTrack] = useState(0);
 
 
     
@@ -68,7 +62,6 @@ export default function MusicPlayer({musicData, nextPageHandler, prevPageHandler
         if(currentTrack < musicData.length -1){
           moveTrack(1);
         }else{
-          setTrack(0);
           setIsPlaying(false);
           nextPageHandler();
         }
@@ -79,7 +72,6 @@ export default function MusicPlayer({musicData, nextPageHandler, prevPageHandler
         if(currentTrack > 0){
           moveTrack(-1);
         }else{
-          setTrack(0);
           setIsPlaying(false);
           prevPageHandler();
         }

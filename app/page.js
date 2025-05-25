@@ -18,7 +18,10 @@ export default function(){
       
 
       <Link href='/chapter/1' className={style.move_button}>
-        <span>page move</span>
+        <span className={style.move_button_brackets}>(</span>
+        <span className={style.move_button_text}>ENTER</span>
+        <span className={style.move_button_brackets}>)</span>
+        <img className={style.move_button_img} src="/images/move_button.png"></img>
       </Link>
 
 

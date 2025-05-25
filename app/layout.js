@@ -5,7 +5,7 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <body>
-        <NavbarContainer/>
+        <NavbarContainer />
         {children}
       </body>
     </html>

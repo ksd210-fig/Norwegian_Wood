@@ -43,17 +43,20 @@ export default function Navbar({myData}){
                 }} src='/images/hamburger_close.png' />
                 <div className={style.modal_chapter}>
                     {myData.map((a) => (
-                        <div key={a.index}>
+                        <div key={a.index} className={style.chapter_item}>
                             <Link href={'/chapter/' + a.index} onClick={()=>setState('closeModal')} className={style.hoverUnderline}>
-                                <span className={style.chapter_index}>{twoDigit(a.index)} </span>
-                                <span style={{letterSpacing : '10px'}}>. </span>
-                                <span className={style.chapter_text}>{a.chapter}</span>
-                                <span className={style.Libre}>(</span>
-                                <span className={style.music_length}>{a.music_titles.length}</span>
-                                <span className={style.Libre}>)</span>
+                                <div className={style.chapter_container}>
+                                    <span className={style.chapter_index}>{twoDigit(a.index)} </span>
+                                    <span style={{letterSpacing : '10px'}}>. </span>
+                                    <span className={style.chapter_text}>{a.chapter}</span>
+                                    <span className={style.Libre}>(</span>
+                                    <span className={style.music_length}>{a.music_titles.length}</span>
+                                    <span className={style.Libre}>)</span>
+                                </div>
                             </Link>
                         </div>
                     ))}
+                    <div className={style.modal_chapter_footer}>※ 2, 5, 9장은 소설 속 음악이 등장하지 않아 리스트에 포함되지 않았습니다.</div>
                 </div>
             </div>
         </div>
